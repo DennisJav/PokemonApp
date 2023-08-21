@@ -25,8 +25,7 @@
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="normal"
-        android:minWidth="42dp"
-        app:layout_constraintStart_toStartOf="@+id/pokemon_type_image"
+        app:layout_constraintEnd_toStartOf="@+id/pokemon_type_image"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@id/pokemon_id"
         app:layout_constraintTop_toTopOf="parent"
@@ -36,12 +35,12 @@
         android:id="@+id/pokemon_type_image"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="52dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompact="@drawable/fire_icon   "/>
-
+        app:layout_constraintVertical_bias="0.0"
+        tools:srcCompact="@drawable/fire_icon   " />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

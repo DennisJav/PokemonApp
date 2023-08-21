@@ -47,7 +47,7 @@ class PokemonAdapter() : ListAdapter<Pokemon, PokemonAdapter.viewHolder>(DiffCal
     }
 
 
-    inner class viewHolder(val view: View) : RecyclerView.ViewHolder(view){
+    inner class viewHolder(private val view: View) : RecyclerView.ViewHolder(view){
 
         private val idText = view.findViewById<TextView>(R.id.pokemon_id)
         private val nameText = view.findViewById<TextView>(R.id.pokemon_name)
@@ -68,8 +68,10 @@ class PokemonAdapter() : ListAdapter<Pokemon, PokemonAdapter.viewHolder>(DiffCal
             typeImage.setImageResource(imageId)
 
             view.setOnClickListener{
-                if
-                onItemClickListener(pokemon)
+                if(::onItemClickListener.isInitialized){
+                    onItemClickListener(pokemon)
+                }
+
             }
         }
 
