@@ -6,14 +6,27 @@
     android:orientation="vertical"
     tools:context=".DetailFragment">
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    
 
     <ImageView
         android:id="@+id/fragment_detail_image"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:orientation="vertical"
-        tools:src=".DetailFragment" />
-
+        android:scaleType="centerCrop"
+        android:src="@drawable/boulbasour"/>
+<!--        android:orientation="vertical"-->
+<!--        tools:src=".DetailFragment"-->
+        <ProgressBar
+            android:id="@+id/loading_wheel"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        
+    </FrameLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,7 +41,7 @@
             android:fontFamily="sans-serif-medium"
             android:gravity="center"
             android:padding="16dp"
-            android:text="HP 45"
+            android:text=""
             android:textSize="18sp" />
 
         <TextView
@@ -40,7 +53,7 @@
             android:fontFamily="sans-serif-medium"
             android:gravity="center"
             android:padding="16dp"
-            android:text="Attack 48"
+            android:text=""
             android:textSize="18sp" />
     </LinearLayout>
 
@@ -58,7 +71,7 @@
             android:fontFamily="sans-serif-medium"
             android:gravity="center"
             android:padding="16dp"
-            android:text="Defense 45"
+            android:text=""
             android:textSize="18sp" />
 
         <TextView
@@ -70,7 +83,7 @@
             android:fontFamily="sans-serif-medium"
             android:gravity="center"
             android:padding="16dp"
-            android:text="Speed 48"
+            android:text=""
             android:textSize="18sp" />
 
     </LinearLayout>

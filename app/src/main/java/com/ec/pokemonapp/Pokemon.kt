@@ -7,7 +7,9 @@ data class Pokemon(
     val attack: Int,
     val defense: Int,
     val Speed: Int,
-    val type: PokemonType
+    val type: PokemonType,
+    val imageUrl: String,
+    val soundId: Int
 ) {
     enum class PokemonType {
         GRASS, FIRE, WATER, FIGHTER, ELECTRIC
