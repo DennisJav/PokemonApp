@@ -2,6 +2,7 @@ package com.ec.pokemonapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.navigation.findNavController
 
 class MainActivity : AppCompatActivity(), ListFragment.PokemonSelectListener {
 
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity(), ListFragment.PokemonSelectListener {
         //vamos a apasar el pokemon de main a detail
         //activity a fragment
         detailFragment.setPokemonData(pokemon)
+        //findNavController(R.id.main_navigation_container).navigate(ListFragmentDirections.an)
     }
 
 //    fun onListenerPokemon(pokemon: Pokemon){
